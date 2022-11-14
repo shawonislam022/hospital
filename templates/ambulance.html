@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Ambulance Service</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/ambulance.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<form method="post" >
+    {% csrf_token %} 
+    <h2>BOOK AMBULANCE HERE!</h2>
+    <div class="booking-form-box">
+        
+        <div class="booking-form">
+            <label for="">ENTER TYPE OF TRIP</label> <br>
+            <input type="text" placeholder="Roundtrip Or Oneway or None" required name="type" class="form-control">
+            <label for="">FROM</label>
+            <input type="text" placeholder="Enter your city !" required name="source" class="form-control">
+            <label for="">TO</label>
+            <input type="text" placeholder="Enter Destinition City!" required name="to" class="form-control" >
+            <div class="input-grp">
+                <label for="">DEPARTURE</label>
+                <input type="date" class="form-control select-date" required name="dep" >
+            </div>
+            <div class="input-grp">
+                <label for="">NO OF PERSON</label>
+                <input type="NUMBER" class="form-control " required value="0" name="nop" >
+
+            </div> <div class="input-grp">
+                <label for="">CONTACT NO</label>
+                <input type="number" class="form-control select-date" placeholder="Enter contact no !" required name="contactno" >
+            </div> 
+            <div class="input-grp">
+                <label for="">DEPARTURE TIME</label>
+                <input type="time" class="form-control select-date" placeholder="Enter time !" required name="dtime" >
+            </div>
+            <div class="">
+                <label for="">DEPARTURE ADDRESS</label>
+                <input type="text" class="form-control" placeholder="Enter address there !" required name="dadd" >
+            </div><br>
+
+            <div class="custom-select">
+                <label >OXYGEN</label>
+                <input type="text" placeholder="Do you need oxygen ?" required class="form-control" name="oxygen">
+            </div>
+            <div class="input-grp">
+                <input type="submit" value="FIND" class="flight">
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

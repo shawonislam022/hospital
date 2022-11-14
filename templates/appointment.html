@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Take Apoointment ! </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/appointment.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+ 
+ <!-- pname = request.POST.get('pname')
+        dept = request.POST.get('dept')
+        doctor = request.POST.get('doctor')
+        phoneno = request.POST.get('phoneno')
+        problem = request.POST.get('problem')
+        email = request.POST.get('email')
+        gender = request.POST.get('gender')-->
+
+  <div class="container">
+    <div class="title">Book Appointment</div>
+    <div class="content">
+      <form method="post">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Patient Name</span>
+            <input type="text" placeholder="Enter your name" required name="pname">
+          </div>
+          <div class="input-box">
+            <span class="details">Department</span>
+<div class="select" >
+   <input type="text" placeholder="Enter department ?" required name="dept">
+</div>
+          </div>
+          <div class="input-box">
+            <span class="details">Doctor</span>
+            <input type="text" placeholder="Enter Doctor's Name" required name="doctor">
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="number" placeholder="Enter your number" required name="phoneno">
+          </div>
+          <div class="input-box">
+            <span class="details">Problem</span>
+            <input type="text" placeholder="Enter your problem" required name="problem"> 
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your Email" name="email">
+            
+          </div>
+          <div class="input-box">
+          <label for="">Gender</label>
+          <input type="text" placeholder="Male,Female Or Others !" name="gender">
+          
+          </div>
+          <div class="input-box"><span class="details">Date</span>
+            <input type="date"></div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Submit">
+        </div>
+          
+        
+        
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signupform.css' %}">
+</head>
+<body>
+    <div class="signupform">
+        <img src="../Imgae/signuplogo.png" alt="">
+        <h1>Sign Up Now!</h1>
+        <form method="post" >
+            {% csrf_token %}
+            <input type="text" class="username" placeholder="@username (e.g-shawon1234)" name="username" required>
+
+        
+            <input type="email" class="username" placeholder="Enter your email here!" name="email" required>
+            
+            <input type="password" class="username" placeholder="Enter a strong password !" name="password" required>
+            <p> <span><input type="checkbox" name="decision"></span> I agree to the terms of services.</p>
+            <input class="button" type="submit" value="Sign Up">
+            <hr>
+            <p class="or">OR</p>
+            <a href="accounts.google.com" target="_blank"><input class="button2" type="submit" value="Log in with google"></a>
+            <p>Do you have an account ? <a href="{% url 'signin' %}" target="_blank">Sign in</a></p>
+
+
+        </form>
+    </div>
+    
+</body>
+</html>

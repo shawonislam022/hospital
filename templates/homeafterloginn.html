@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page! </title> 
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/homeafterlogin.css' %}">
+
+</head>
+<body>
+    
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+               <a href="{% url 'nhome' %}"><h2 class="logo">ICE</h2></a> 
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="{% url 'appointment' %}" target="_blank">APPOINTMENT</a></li>
+                    <li><a href="{% url 'blood' %}" target="_blank">BLOOD</a></li>
+                    <li><a href="{% url 'ambulance' %}" target="_blank">AMBULANCE</a></li>
+                    <li><a href="{% url 'contactus' %}" target="_blank">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Text for search">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>WELCOME <br> TO <br><span>ICE MEDICAL</span></h1>
+            
+                <p class="par" style="color: #00b894; font-family: Century Gothic; font-weight: bold;">ICE Medical is the oldest and popular medical of Bangladesh. It was started from 2002 and through <br> services with pride.For more about use click 'JOIN US'</p>
+
+                <button class="cn"><a href="{% url 'joinus' %}" target="_blank">JOIN US</a></button>
+                <div class="form">
+                    
+                    <!--<form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="username" placeholder="@username!" >
+                    <input type="password" name="password" placeholder="Enter your password !" >
+                    <button type="submit" class="btnn"><a href="#">Login</a></button>
+                </form>
+                    <p class="link">Don't have an account! <br> <br>
+                    <a href="{% url 'signup' %}" target="_blank">Sign UP </a>Here!  </p>-->
+                    
+                </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Blood Donor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/blooddonor.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <h2>DONATE BLOOD AND SAVE LIFES !</h2>
+    <div class="booking-form-box">
+        <div class="radio-btn">
+            
+
+        </div>
+        <div class="booking-form">
+            <label for="">YOUR NAME</label>
+            <input type="text" class="form-control" placeholder="ENTER YOUR NAME !" required name="name">
+            <label for="">BLOOD GROUP</label>
+           <input type="text" class="form-control" required placeholder="Enter your Blood Group !" name="bgroup">
+            
+            <div class="input-grp">
+                <label for="">LAST DONATION DATE</label>
+                <input type="date" class="form-control select-date" required name="ldate">
+            </div>
+            <div class="input-grp">
+                <label for="">QUANTITIY</label>
+                <input type="NUMBER" class="form-control " placeholder="How much bag blood need ! " required value="0" name="quantity">
+
+            </div> <div class="input-grp">
+                <label for="">CONTACT NO</label>
+                <input type="number" class="form-control select-date" placeholder="Enter contact no !" required name="contactno">
+            </div> 
+            <div class="input-grp">
+                <label for="">YOUR AGE</label>
+                <input type="number" class="form-control select-date" placeholder="Enter YOUR AGE !" required name="age">
+            </div>
+            <div class="input-grp">
+                <label for="">YOUR CITY</label>
+                <input type="text" name="city" class="form-control" required placeholder="Enter your city !">
+            </div>
+            <div class="input-grp">
+                <label for="">YOUR ADDRESS </label>
+                <input type="TEXT" class="form-control select-date" placeholder="Enter Address! !" required name="add">
+            </div>
+            <br>
+
+            <br>
+            
+            <div class="input-grp">
+                <input type="submit" value="PLACE" class="flight">
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

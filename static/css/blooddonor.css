@@ -1,0 +1,136 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../image/blooddonor3.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-weight: bold;
+
+}
+.booking-form-box{
+    max-width: 350px;
+    border: 1px solid #ced4da;
+    margin: 10% auto 0;
+    font-weight: bold;
+}
+.radio-btn{
+    margin: 0 20px;
+}
+
+.radio-btn .btn{
+    margin: 20px 10px 20px 0;
+    box-shadow: none;
+}
+.radio-btn .btn::after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    top: -2px;
+    left: -1px;
+    background-color: white;
+    position: none;
+    display: inline-block;
+    border: 3px solid white;
+    visibility: visible;
+    border-radius: 50%;
+}
+.radio-btn .btn:checked::after{
+    content: '';
+    background-color: black;
+    transition: 0.5s ease;
+}
+.radio-btn span{
+    color: white;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.booking-form{
+    padding: 0 20px 20px;
+
+}
+
+.booking-form label{
+    margin-bottom: 5px ;
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+}
+input::placeholder{
+    color: #ff7200 !important ;
+    font-weight: BOLD;
+}
+select::placeholder{
+    color: #ff7200;
+    font-weight: bold;
+}
+.input-grp{
+    width: 151px;
+    display: inline-block;
+}
+.form-control{
+    font-size: 12px !important;
+    border-radius: 0 !important;
+    color:#ff7200 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.select-date::-webkit-inner-spin-button,
+.select-date::-webkit-outer-spin-button
+{
+   
+    margin: 0;
+
+}
+.select-date::-webkit-calender-picker-indicator{
+    background: transparent !important;
+
+}
+.custom-select .shawon{
+    color: white !important;
+    font-size: 12px !important;
+    border: 1px solid #ced4da !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    font-size: 12px !important;
+    border-radius: 0 !important;
+    color: white !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    
+    
+}
+.custom-select option{
+    font-size: 12px !important;
+    border-radius: 0 !important;
+    color: rgb(197, 40, 40) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    background-color: black;
+
+}
+.input-grp .flight{
+    width: 100%;
+    padding: 9px 15px ;
+    margin-top: 10px;
+    margin-left: 60px;
+    font-size: 12px;
+    border: 1px solid #ced4da !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    transition: 0.5s ease;
+    
+}
+h2{
+    font-size: 20px;
+    color: #ff7200;
+   padding-top: 50px;
+    text-align: center;
+}
+.input-grp .flight:hover{
+    background-color: #ff7200;
+}
+.booking-form ::placeholder{
+    color: #ff7200;
+}

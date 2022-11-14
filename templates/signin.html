@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Now! </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <div class="container">
+        <div class="card">
+            <div class="inner-box">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+    
+                </div>
+                <div class="card-back"><form>
+                    <h2>LOGIN</h2>
+                    <input type="name" class="input-box" placeholder="@username" required name="username" >
+                    <input type="password" class="input-box" placeholder="Enter password here! " required name="password">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <input type="checkbox"> <span>Remember Me</span>
+                </form>
+                <button type="button" class="btn" ><a href="{% url 'signup' %}" class="btn2" target="_blank">I am new here !</a></button>
+                <a href="#" target="_blank">Forgot password</a>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+</form>
+</body>
+</html>

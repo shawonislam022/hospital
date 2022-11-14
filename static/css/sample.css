@@ -1,0 +1,20 @@
+
+*{
+    font-family: Century Gothic;
+    margin: 0;
+    padding:0;
+    
+
+}
+
+.form{
+
+    color: red;
+    text-align: center;
+    margin-top: 20%;
+
+}
+
+.form #input{
+    line-break: 20px;
+}
