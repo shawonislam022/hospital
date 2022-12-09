@@ -231,3 +231,12 @@ background: white;
     text-align: center;
     color: #ff7200;
 }
+#preloader{
+    background: black url(../image/preloader.gif) no-repeat center;
+    background-size: 12%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100; 
+}
+

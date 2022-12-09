@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from . import models 
 from django.shortcuts import redirect
 from .models import *
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 '''
 def contact(request):
@@ -26,8 +29,28 @@ def index(request):
         login.username=username
         login.password=password
         login.save()
+        res=authenticate(username=username ,password=password)
+        if(res is None):
+            #return HttpResponse('<h1>Failed</h1>')
+            return redirect('signup')
+        else:
+            #return HttpResponse('<h1>Successful</h1>')
+            return redirect('loggedin')
+        
+        '''def signin(request):
+        if(request.method=='GET'):
+        return render(request,'signin.html')
+        elif(request.method=='POST'):
+        u= request.POST.get('username')
+        p= request.POST.get('password')
+        res=authenticate(username=u, password=p)
+        if(res is None):
+            return HttpResponse('<h1>Failed</h1>')
+        else:
+            login(request,res)
+            return redirect('index')'''
         #return HttpResponse('<h1>Thanks for Contract with us</h1>')
-        return redirect('loggedin')
+        #return redirect('loggedin')
     return render(request,'index.html')
     
 def ambulance(request):
@@ -212,12 +235,19 @@ def signin(request):
         login.username=username
         login.password=password
         login.save()
+        messages.info(request, f"You are now logged in as {username}.")
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('signup')
+        
         '''user = authenticate(request, username=username ,password=password)
 if user is not None:
 	login(request, user)
 	return redirect('home')'''
+
         #return HttpResponse('<h1>Thanks for Contract with us</h1>')
-        return redirect('loggedin')
+        #return redirect('loggedin')
     return render(request,'signin.html')
 def homeafterlogin(request):
     return render(request,'homeafterlogin.html')
@@ -233,4 +263,7 @@ def appointmentdata(request):
     for i in appointment:
         print(appointment)
     return render(request,'appointmentdata.html', {'Appintment': appointment})
+
+def preloader(request):
+    return render(request,'preloader.html')
 

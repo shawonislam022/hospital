@@ -11,7 +11,9 @@
 
 </head>
 <body>
-    
+    <div id="preloader">
+
+    </div>
     <div class="main">
         <div class="navbar">
             <div class="icon">
@@ -51,7 +53,14 @@
                 </div>
         </div>
     </div>
-
+    
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        }
+        )
+    </script>
 
 </body>
 </html>

@@ -17,5 +17,6 @@ urlpatterns = [
     path('nhome',views.homeafterloginn,name='nhome'),
     path('showdata',views.showdata,name='showdata'),
     path('appointmentdata',views.appointmentdata,name='appointmentdata'),
+    path('preloader', views.preloader,name='preloader'),
   
 ]

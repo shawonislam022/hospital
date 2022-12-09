@@ -18,3 +18,11 @@
 .form #input{
     line-break: 20px;
 }
+#preloader{
+    background: white url(../image/preloader\ 2.gif) no-repeat center;
+    background-size: 25%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100; 
+}
